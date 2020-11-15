@@ -386,6 +386,7 @@ header .menu-list-container .menu-list .list-link {
 }
 .slide-2-text-para-2 .scroll-arrow {
   height: 2.187rem;
+  padding-top: 1rem;
 }
 
 .slide-2-text-para-3 {
@@ -622,6 +623,7 @@ footer .yellow-btn {
     text-transform: uppercase;
     margin-top: 2rem;
     display: inline-block;
+    font-size: 15px;
   }
 
   .contact-us h5 {
@@ -654,6 +656,45 @@ footer .yellow-btn {
 
   .buttons {
     margin: auto;
+  }
+
+  .gredient-btn {
+    font-size: 16px;
+  }
+
+  .slide-2-text-para-1 p {
+    font-size: 14px;
+    line-height: 150%;
+    padding-top: 15px;
+  }
+
+  .slide-3 .slide-text-3 {
+    max-width: 35rem;
+  }
+
+  .slide-3 .slide-text-3 h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .slide-3 .slide-text-3 h5 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 163%;
+    font-weight: 400;
+    font-size: 15px;
+    padding-top: 1rem;
+  }
+
+  footer .pink-btn, footer .yellow-btn {
+    padding: 0.8rem 1rem;
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 15px;
   }
 }
 @keyframes repeatGredient {

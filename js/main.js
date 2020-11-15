@@ -3,11 +3,6 @@
 
 $(window).bind('load',function(){
 
-  $(".loader-overlay").css({
-    "display" : "none"
-})
-});
-
   console.log(window.innerWidth + "  and  " + window.innerHeight);
 
   var main_height  = window.innerHeight;
@@ -22,6 +17,13 @@ $(window).bind('load',function(){
     top : (main_height * 50/100 - logoHeight/2),
     left : (main_width * 50/100 - logoWidth/2)
   })
+
+  $(".loader-overlay").css({
+    "display" : "none"
+})
+});
+
+
 
 var rem;
 
@@ -421,7 +423,7 @@ $('.menu-bar-toggle').on('click',function(){
     scrollTrigger: {
         trigger : '#main-banner',
         scrub : true,
-        start : '+=3200',
+        start : '+=2800',
         end : "+=1500"
     },
     y : -(60/100 * window.innerHeight),
@@ -766,26 +768,7 @@ $('.menu-bar-toggle').on('click',function(){
   })
 
     
-  gsap.from("#canvas_id", {
-    scrollTrigger: {
-      trigger : '#Physical',
-      scrub : true,
-      start : '+=0',
-      // snap: {
-      //   snapTo: 1/8,
-      //   duration: { min: 0.1, max: 0.3 },
-      //   anticipatePin: 0.3,
-      //   delay: 0
-      // },
-      marker : true,
-      end : "+=500",
-      onUpdate : self => completedThirdStep(self.progress)
-    },
-    transform : 'translateX(-80%)',
-    ease: "none"
-    
-    
-    })
+ 
 
 
      
@@ -853,7 +836,7 @@ if(window.innerHeight > window.innerWidth)
     scrollTrigger: {
       trigger : '#Physical',
       scrub : true,
-      start : '-=500',
+      start : '+=0',
       // snap: {
       //   snapTo: 1/8,
       //   duration: { min: 0.1, max: 0.3 },
@@ -861,12 +844,16 @@ if(window.innerHeight > window.innerWidth)
       //   delay: 0
       // },
       marker : true,
-      end : "+=600"
+      end : "+=150",
+      onUpdate : self => completedThirdStep(self.progress)
     },
-    transform : 'translateX(-200%)',
+    transform : 'translateX(-170%)',
     ease: "none"
     
+    
     })
+    
+    console.log('ari ari ari')
 
 }
 
@@ -884,12 +871,15 @@ else if(window.innerHeight < window.innerWidth)
       //   delay: 0
       // },
       marker : true,
-      end : "+=300"
+      end : "+=500",
+      onUpdate : self => completedThirdStep(self.progress)
     },
-    transform : 'translateX(-35%)',
+    transform : 'translateX(-80%)',
     ease: "none"
     
+    
     })
+
 }
 		  
       
