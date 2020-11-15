@@ -115,6 +115,8 @@ body
 {
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 .gredient-btn
@@ -126,7 +128,61 @@ body
     text-transform: uppercase;
 }
 
+.loader-overlay
+{
+    position: fixed;
+    z-index: 9999999999999;
+    top : 0;
+    left: 0;
+    right : 0;
+    bottom: 0;
+    background : #374E59;
+    display: flex;
 
+    .loader-container
+    {
+        width: 65%;
+        height: auto;
+        max-width: 300px;
+        position: relative;
+        z-index: 0;
+        margin : auto;
+        .loader-logo
+        {
+            width: 100%;
+   
+        }
+
+        .gredient-animation
+        {
+            position: absolute;
+            z-index: -1;
+            top: 21px;
+            bottom: 21px;
+            left: 21px;
+            right: 21px;
+            background: url(../img/loader-gredient.png);
+            background-size: auto 100%;
+            background-repeat: repeat-x;
+            animation-name: repeatGredient;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        
+
+        }
+
+        h4
+        {
+            color : #fff;
+            text-align: center;
+            position: absolute;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
 
 
 
@@ -187,8 +243,8 @@ header
             justify-content: space-between;
             .icon-svg
             {
-                flex-basis: 28px;
-                width: 28px;
+                flex-basis: 21px;
+                width: 18px;
             }
 
             h5
@@ -884,4 +940,17 @@ footer
         margin : auto;
     }
     
+}
+
+
+@keyframes repeatGredient {
+
+    from {
+        background-position-x: 0px;
+    }
+
+    to
+    {
+        background-position-x: 493px;
+    }
 }

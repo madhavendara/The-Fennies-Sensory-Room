@@ -1,7 +1,13 @@
 
 
 
-$(window).on('load',function(){
+$(window).bind('load',function(){
+
+  $(".loader-overlay").css({
+    "display" : "none"
+})
+});
+
   console.log(window.innerWidth + "  and  " + window.innerHeight);
 
   var main_height  = window.innerHeight;
@@ -17,7 +23,6 @@ $(window).on('load',function(){
     left : (main_width * 50/100 - logoWidth/2)
   })
 
-})
 var rem;
 
 if(window.innerWidth < 1367 && window.innerWidth > 1280)
